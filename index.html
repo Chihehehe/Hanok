@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HANOK | Korean BBQ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;600;700&family=Noto+Serif+KR:wght@400;600;700&family=Noto+Sans+KR:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.cdnfonts.com/css/din-neuzeit-grotesk" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#home">Skip to content</a>
+
+    <header class="site-header" id="top">
+      <div class="container header-inner">
+        <div class="brand">
+          <div class="logo-mark" aria-hidden="true"></div>
+          <a href="#home" class="logo-text" aria-label="Hanok Home">HANOK</a>
+        </div>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+        <nav class="nav" id="primary-nav" aria-label="Primary">
+          <ul>
+            <li><a class="nav-link active" href="#home">HOME</a></li>
+            <li><a class="nav-link" href="#menu">MENU</a></li>
+            <li><a class="nav-link" href="#about">ABOUT US</a></li>
+            <li><a class="nav-link" href="#contact">CONTACT US</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="eaves" aria-hidden="true"></div>
+    </header>
+
+    <main>
+      <!-- HOME / HERO -->
+      <section id="home" class="section hero" aria-label="Home">
+        <div class="container hero-inner">
+          <h1 class="display hero-title">HANOK</h1>
+          <p class="lead hero-subtitle">Korean Fine BBQ</p>
+          <div class="cta-row">
+            <a href="#contact" class="btn btn-primary">Reservation</a>
+          </div>
+        </div>
+        <div class="hero-pattern" aria-hidden="true"></div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="section about" aria-label="About Us">
+        <div class="container">
+          <div class="about-frame">
+          <header class="about-header">
+            <p class="about-micro">Special moments</p>
+            <h2 class="about-title">ABOUT US</h2>
+          </header>
+          <div class="about-rows">
+            <div class="about-card about-img" style="--img:url('https://www.hunterhunter.com.au/media/xeubqp2c/hanok-korean-restaurant-westfield-kotara-newcastle-nsw-008.jpeg?v=1db4c5a67be8b70')">
+              <span class="visually-hidden">HANOK interior</span>
+            </div>
+            <div class="about-card about-center">
+              <p class="about-script">Taste perception</p>
+              <h3 class="about-headline">TRADITIONAL<br/>& MODERN</h3>
+              <p class="about-desc">Sed ut perspiciatis unde omnis iste sunt totam rem aperiam eaque illo.</p>
+              <a href="#menu" class="btn btn-gold">READ MORE</a>
+            </div>
+            <div class="about-card about-img" style="--img:url('https://resizer.otstatic.com/v3/photos/47665298-2?width=752&height=752&webp=true')">
+              <span class="visually-hidden">Tabletop grilling</span>
+            </div>
+          </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MENU -->
+      <section id="menu" class="section menu" aria-label="Menu">
+        <div class="container">
+          <h2 class="section-title">Menu</h2>
+          <p class="section-sub">Signature cuts and classics for the perfect grill.</p>
+
+          <div class="menu-grid">
+            <article class="menu-card">
+              <h3>Galbi</h3>
+              <p>Marinated short ribs, sweet-savory glaze with pear and soy.</p>
+              <span class="price">$28</span>
+            </article>
+            <article class="menu-card">
+              <h3>Bulgogi</h3>
+              <p>Thin-sliced beef, caramelized edges, sesame and scallion.</p>
+              <span class="price">$22</span>
+            </article>
+            <article class="menu-card">
+              <h3>Samgyeopsal</h3>
+              <p>Pork belly, grill at the table with ssam and sauces.</p>
+              <span class="price">$20</span>
+            </article>
+            <article class="menu-card">
+              <h3>Kimchi Jjigae</h3>
+              <p>Rich stew with aged kimchi, tofu, and pork.</p>
+              <span class="price">$14</span>
+            </article>
+            <article class="menu-card">
+              <h3>Haemul Pajeon</h3>
+              <p>Crispy scallion pancake with assorted seafood.</p>
+              <span class="price">$16</span>
+            </article>
+            <article class="menu-card">
+              <h3>Banchan Set</h3>
+              <p>Seasonal sides to complement every bite.</p>
+              <span class="price">$8</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="section contact" aria-label="Contact Us">
+        <div class="container contact-inner">
+          <h2 class="section-title">Contact Us</h2>
+          <div class="contact-grid">
+            <form class="contact-form" novalidate>
+              <label>
+                Name
+                <input type="text" name="name" placeholder="Your full name" required />
+              </label>
+              <label>
+                Email
+                <input type="email" name="email" placeholder="you@example.com" required />
+              </label>
+              <label>
+                Message
+                <textarea name="message" rows="5" placeholder="Reservation or inquiry" required></textarea>
+              </label>
+              <button type="submit" class="btn btn-primary">Send</button>
+              <p class="form-status" role="status" aria-live="polite"></p>
+            </form>
+            <div class="contact-info">
+              <p><strong>Hours</strong><br/>Mon–Sun · 11:30–22:00</p>
+              <p><strong>Phone</strong><br/><a href="tel:+11234567890">+1 (123) 456-7890</a></p>
+              <p><strong>Address</strong><br/>123 Hanok Way, Seoul District</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> HANOK. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+  </html>
+
+
