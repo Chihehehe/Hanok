@@ -1,0 +1,6 @@
+#FileLock
+#Wed Feb 25 15:26:05 AEDT 2026
+hostName=chiyo.tpg_fwa
+id=19c930bff40ecd35a83925697f41fa89dd7764f9806
+method=file
+server=192.168.1.192\:53055

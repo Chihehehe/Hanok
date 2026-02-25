@@ -6,14 +6,13 @@
     <title>HANOK | Menu</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;600;700&family=Noto+Serif+KR:wght@400;600;700&family=Noto+Sans+KR:wght@300;400;600&display=swap" rel="stylesheet" />
-    <link href="https://fonts.cdnfonts.com/css/din-neuzeit-grotesk" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;600;700&family=Noto+Serif+KR:wght@400;600;700&family=Noto+Sans+KR:wght@300;400;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body class="menu-page">
+  <body class="menu-page menu-page--dark">
     <a class="skip-link" href="#main">Skip to content</a>
 
-    <header class="site-header" id="top">
+    <header class="site-header site-header--dark" id="top">
       <div class="container header-inner">
         <div class="brand">
           <div class="logo-mark" aria-hidden="true"></div>
@@ -33,81 +32,124 @@
           </ul>
         </nav>
       </div>
-      <div class="eaves" aria-hidden="true"></div>
+      <div class="eaves eaves--dark" aria-hidden="true"></div>
     </header>
 
     <main id="main">
-      <!-- Hero header for Menu -->
-      <section class="section menu-hero" aria-label="Menu">
-        <div class="container menu-hero-inner">
-          <h1 class="menu-title">Our Menu</h1>
-          <p class="menu-sub">Explore our platters and classics</p>
-          <nav class="menu-categories" aria-label="Menu categories">
-            <a href="#platters" data-tab="platters">Platters</a>
-            <a href="#entree" data-tab="entree" class="active">Entrée</a>
-            <a href="#main-soup" data-tab="main-soup">Main &amp; Soup</a>
-            <a href="#deep-fried-chicken" data-tab="deep-fried-chicken">Deep Fried Chicken</a>
-            <a href="#side-menu" data-tab="side-menu">Side Menu</a>
-            <a href="#bbq-range" data-tab="bbq-range">BBQ Range</a>
-          </nav>
+      <!-- Hero: category label + title + pill (like reference) -->
+      <section class="menu-hero-dark" aria-label="Menu">
+        <div class="menu-hero-dark__pattern" aria-hidden="true"></div>
+        <div class="container menu-hero-dark__inner">
+          <p class="menu-hero-dark__label" id="hero-category-label">MAIN & SOUP</p>
+          <h1 class="menu-hero-dark__title" id="hero-category-title">Soup & Rice & Noodle</h1>
+          <div class="menu-hero-dark__pill">
+            <span class="menu-hero-dark__pill-icon" aria-hidden="true">🍜</span>
+            <span class="menu-hero-dark__pill-text">식사 메뉴</span>
+          </div>
         </div>
       </section>
 
-      <!-- Platters moved into menu-content below, same layout as others -->
+      <!-- Category tabs -->
+      <nav class="menu-tabs-dark" aria-label="Menu categories">
+        <div class="container menu-tabs-dark__inner">
+          <a href="#platters" class="menu-tabs-dark__link" data-tab="platters">Platters</a>
+          <a href="#entree" class="menu-tabs-dark__link" data-tab="entree">Entrée</a>
+          <a href="#main-soup" class="menu-tabs-dark__link menu-tabs-dark__link--active" data-tab="main-soup">Main &amp; Soup</a>
+          <a href="#deep-fried-chicken" class="menu-tabs-dark__link" data-tab="deep-fried-chicken">Chicken</a>
+          <a href="#side-menu" class="menu-tabs-dark__link" data-tab="side-menu">Side Menu</a>
+          <a href="#bbq-range" class="menu-tabs-dark__link" data-tab="bbq-range">BBQ Range</a>
+        </div>
+      </nav>
 
-      <div class="menu-frame">
-      <div class="menu-content">
-      <!-- Platters -->
-      <section id="platters" class="section menu-section" aria-label="Platters" data-collapsed="true">
-        <div class="container">
-          <h2 class="section-title emblem">Platters</h2>
-          <div class="dish-list" id="grid-platters"></div>
-        </div>
-      </section>
-      <!-- Entrée -->
-      <section id="entree" class="section menu-section" aria-label="Entrée">
-        <div class="container">
-          <h2 class="section-title emblem">Entrée</h2>
-          <div class="dish-list" id="grid-entree"></div>
-        </div>
-      </section>
+      <div class="menu-content-dark">
+        <!-- Platters -->
+        <section id="platters" class="menu-section-dark" aria-label="Platters" data-section="platters" data-collapsed="true">
+          <div class="container">
+            <h2 class="menu-section-dark__title">Platters</h2>
+            <div class="menu-carousel" data-carousel="platters">
+              <button type="button" class="menu-carousel__btn menu-carousel__btn--prev" aria-label="Previous">‹</button>
+              <div class="menu-carousel__track-wrap">
+                <div class="menu-carousel__track" id="carousel-platters"></div>
+              </div>
+              <button type="button" class="menu-carousel__btn menu-carousel__btn--next" aria-label="Next">›</button>
+              <div class="menu-carousel__dots" id="dots-platters"></div>
+            </div>
+          </div>
+        </section>
 
-      <!-- Main & Soup -->
-      <section id="main-soup" class="section menu-section" aria-label="Main &amp; Soup" data-collapsed="true">
-        <div class="container">
-          <h2 class="section-title emblem">Main &amp; Soup</h2>
-          <div class="dish-list" id="grid-main-soup"></div>
-        </div>
-      </section>
+        <section id="entree" class="menu-section-dark" aria-label="Entrée" data-section="entree" data-collapsed="true">
+          <div class="container">
+            <h2 class="menu-section-dark__title">Entrée</h2>
+            <div class="menu-carousel" data-carousel="entree">
+              <button type="button" class="menu-carousel__btn menu-carousel__btn--prev" aria-label="Previous">‹</button>
+              <div class="menu-carousel__track-wrap">
+                <div class="menu-carousel__track" id="carousel-entree"></div>
+              </div>
+              <button type="button" class="menu-carousel__btn menu-carousel__btn--next" aria-label="Next">›</button>
+              <div class="menu-carousel__dots" id="dots-entree"></div>
+            </div>
+          </div>
+        </section>
 
-      <!-- Deep Fried Chicken -->
-      <section id="deep-fried-chicken" class="section menu-section" aria-label="Deep Fried Chicken" data-collapsed="true">
-        <div class="container">
-          <h2 class="section-title emblem">Deep Fried Chicken</h2>
-          <div class="dish-list" id="grid-deep-fried-chicken"></div>
-        </div>
-      </section>
+        <section id="main-soup" class="menu-section-dark" aria-label="Main &amp; Soup" data-section="main-soup">
+          <div class="container">
+            <h2 class="menu-section-dark__title">Main &amp; Soup</h2>
+            <div class="menu-carousel" data-carousel="main-soup">
+              <button type="button" class="menu-carousel__btn menu-carousel__btn--prev" aria-label="Previous">‹</button>
+              <div class="menu-carousel__track-wrap">
+                <div class="menu-carousel__track" id="carousel-main-soup"></div>
+              </div>
+              <button type="button" class="menu-carousel__btn menu-carousel__btn--next" aria-label="Next">›</button>
+              <div class="menu-carousel__dots" id="dots-main-soup"></div>
+            </div>
+          </div>
+        </section>
 
-      <!-- Side Menu -->
-      <section id="side-menu" class="section menu-section" aria-label="Side Menu" data-collapsed="true">
-        <div class="container">
-          <h2 class="section-title emblem">Side Menu</h2>
-          <div class="dish-list" id="grid-side-menu"></div>
-        </div>
-      </section>
+        <section id="deep-fried-chicken" class="menu-section-dark" aria-label="Deep Fried Chicken" data-section="deep-fried-chicken" data-collapsed="true">
+          <div class="container">
+            <h2 class="menu-section-dark__title">Deep Fried Chicken</h2>
+            <div class="menu-carousel" data-carousel="deep-fried-chicken">
+              <button type="button" class="menu-carousel__btn menu-carousel__btn--prev" aria-label="Previous">‹</button>
+              <div class="menu-carousel__track-wrap">
+                <div class="menu-carousel__track" id="carousel-deep-fried-chicken"></div>
+              </div>
+              <button type="button" class="menu-carousel__btn menu-carousel__btn--next" aria-label="Next">›</button>
+              <div class="menu-carousel__dots" id="dots-deep-fried-chicken"></div>
+            </div>
+          </div>
+        </section>
 
-      <!-- BBQ Range -->
-      <section id="bbq-range" class="section menu-section" aria-label="BBQ Range" data-collapsed="true">
-        <div class="container">
-          <h2 class="section-title emblem">BBQ Range</h2>
-          <div class="dish-list" id="grid-bbq-range"></div>
-        </div>
-      </section>
-      </div>
+        <section id="side-menu" class="menu-section-dark" aria-label="Side Menu" data-section="side-menu" data-collapsed="true">
+          <div class="container">
+            <h2 class="menu-section-dark__title">Side Menu</h2>
+            <div class="menu-carousel" data-carousel="side-menu">
+              <button type="button" class="menu-carousel__btn menu-carousel__btn--prev" aria-label="Previous">‹</button>
+              <div class="menu-carousel__track-wrap">
+                <div class="menu-carousel__track" id="carousel-side-menu"></div>
+              </div>
+              <button type="button" class="menu-carousel__btn menu-carousel__btn--next" aria-label="Next">›</button>
+              <div class="menu-carousel__dots" id="dots-side-menu"></div>
+            </div>
+          </div>
+        </section>
+
+        <section id="bbq-range" class="menu-section-dark" aria-label="BBQ Range" data-section="bbq-range" data-collapsed="true">
+          <div class="container">
+            <h2 class="menu-section-dark__title">BBQ Range</h2>
+            <div class="menu-carousel" data-carousel="bbq-range">
+              <button type="button" class="menu-carousel__btn menu-carousel__btn--prev" aria-label="Previous">‹</button>
+              <div class="menu-carousel__track-wrap">
+                <div class="menu-carousel__track" id="carousel-bbq-range"></div>
+              </div>
+              <button type="button" class="menu-carousel__btn menu-carousel__btn--next" aria-label="Next">›</button>
+              <div class="menu-carousel__dots" id="dots-bbq-range"></div>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
 
-    <footer class="site-footer">
+    <footer class="site-footer site-footer--dark">
       <div class="container">
         <p>© <span id="year"></span> HANOK. All rights reserved.</p>
       </div>
@@ -115,6 +157,4 @@
 
     <script src="script.js"></script>
   </body>
-  </html>
-
-
+</html>

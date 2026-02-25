@@ -1,0 +1,10 @@
+D:\Hanok\server\src\main\java\com\hanok\config\CorsConfig.java
+D:\Hanok\server\src\main\java\com\hanok\controller\MenuController.java
+D:\Hanok\server\src\main\java\com\hanok\controller\PlatterController.java
+D:\Hanok\server\src\main\java\com\hanok\HanokApplication.java
+D:\Hanok\server\src\main\java\com\hanok\model\Category.java
+D:\Hanok\server\src\main\java\com\hanok\model\MenuItem.java
+D:\Hanok\server\src\main\java\com\hanok\model\Platter.java
+D:\Hanok\server\src\main\java\com\hanok\repository\CategoryRepository.java
+D:\Hanok\server\src\main\java\com\hanok\repository\MenuItemRepository.java
+D:\Hanok\server\src\main\java\com\hanok\repository\PlatterRepository.java
